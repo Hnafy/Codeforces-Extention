@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Hnafy",
+    "version": "1.0",
+    "description": "Extract Codeforces problem code and auto fill submit page",
+
+    "permissions": ["storage"],
+
+    "host_permissions": ["https://codeforces.com/*"],
+
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://codeforces.com/problemset/problem/*",
+                "https://codeforces.com/problemset/submit"
+            ],
+            "js": ["content.js"]
+        }
+    ]
+}
